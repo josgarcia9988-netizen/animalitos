@@ -1,0 +1,1678 @@
+{
+  "topPatterns": {
+    "0": {
+      "animalName": "Delfín",
+      "color": "green",
+      "antecesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 29
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 10
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 7
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 29
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 7
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 4
+        }
+      ]
+    },
+    "1": {
+      "animalName": "Carnero",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 4,
+          "animalName": "Alacrán",
+          "color": "black",
+          "count": 10
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 10
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 5
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 36,
+          "animalName": "Culebra",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacrán",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "2": {
+      "animalName": "Toro",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 20,
+          "animalName": "Cochino",
+          "color": "black",
+          "count": 18
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 17
+        },
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 7
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 4
+        }
+      ]
+    },
+    "3": {
+      "animalName": "Ciempies",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 3,
+          "animalName": "Ciempiés",
+          "color": "red",
+          "count": 11
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacrán",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 19,
+          "animalName": "Chivo",
+          "color": "red",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 12
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempiés",
+          "color": "red",
+          "count": 11
+        },
+        {
+          "animal": 7,
+          "animalName": "Perico",
+          "color": "red",
+          "count": 5
+        }
+      ]
+    },
+    "4": {
+      "animalName": "Alacran",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 12
+        },
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 4
+        },
+        {
+          "animal": 29,
+          "animalName": "Elefante",
+          "color": "black",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 10
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempiés",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 4
+        }
+      ]
+    },
+    "5": {
+      "animalName": "León",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 17
+        },
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 7
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 10
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 5
+        }
+      ]
+    },
+    "6": {
+      "animalName": "Rana",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 7,
+          "animalName": "Perico",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 19,
+          "animalName": "Chivo",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 9,
+          "animalName": "Aguila",
+          "color": "red",
+          "count": 4
+        }
+      ]
+    },
+    "7": {
+      "animalName": "Perico",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 14,
+          "animalName": "Paloma",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 19,
+          "animalName": "Chivo",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 6,
+          "animalName": "Rana",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 14,
+          "animalName": "Paloma",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "8": {
+      "animalName": "Ratón",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 30
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 6,
+          "animalName": "Rana",
+          "color": "black",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 20,
+          "animalName": "Cochino",
+          "color": "black",
+          "count": 31
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "9": {
+      "animalName": "Aguila",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 6,
+          "animalName": "Rana",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 34,
+          "animalName": "Venado",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 3
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "10": {
+      "animalName": "Tigre",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 11,
+          "animalName": "Gato",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 17,
+          "animalName": "Pavo",
+          "color": "black",
+          "count": 5
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 29
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "11": {
+      "animalName": "Gato",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 11,
+          "animalName": "Gato",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "12": {
+      "animalName": "Caballo",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 30,
+          "animalName": "Caiman",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 2
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 2
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 2
+        }
+      ]
+    },
+    "13": {
+      "animalName": "Mono",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 24,
+          "animalName": "Iguana",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "14": {
+      "animalName": "Paloma",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 7,
+          "animalName": "Perico",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 15,
+          "animalName": "Zorro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 20,
+          "animalName": "Cochino",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 7,
+          "animalName": "Perico",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 15,
+          "animalName": "Zorro",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "15": {
+      "animalName": "Zorro",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 14,
+          "animalName": "Paloma",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 17,
+          "animalName": "Pavo",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "16": {
+      "animalName": "Oso",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 6,
+          "animalName": "Rana",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 21,
+          "animalName": "Gallo",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 33,
+          "animalName": "Pescado",
+          "color": "black",
+          "count": 4
+        }
+      ]
+    },
+    "17": {
+      "animalName": "Pavo",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 3
+        },
+        {
+          "animal": 27,
+          "animalName": "Perro",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 2
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 20,
+          "animalName": "Cochino",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 37,
+          "animalName": "Ballena",
+          "color": "green",
+          "count": 4
+        }
+      ]
+    },
+    "18": {
+      "animalName": "Burro",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 29
+        },
+        {
+          "animal": 27,
+          "animalName": "Perro",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 35,
+          "animalName": "Jirafa",
+          "color": "black",
+          "count": 5
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 30
+        },
+        {
+          "animal": 27,
+          "animalName": "Perro",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 21,
+          "animalName": "Gallo",
+          "color": "red",
+          "count": 4
+        }
+      ]
+    },
+    "19": {
+      "animalName": "Chivo",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 14,
+          "animalName": "Paloma",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 3,
+          "animalName": "Ciempiés",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 6,
+          "animalName": "Rana",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "20": {
+      "animalName": "Cochino",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 31
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 14,
+          "animalName": "Paloma",
+          "color": "red",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 18
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 14
+        },
+        {
+          "animal": 6,
+          "animalName": "Rana",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "21": {
+      "animalName": "Gallo",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 24,
+          "animalName": "Iguana",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 22,
+          "animalName": "Camello",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "22": {
+      "animalName": "Camello",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 21,
+          "animalName": "Gallo",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 11,
+          "animalName": "Gato",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 3
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 15,
+          "animalName": "Zorro",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "23": {
+      "animalName": "Cebra",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 4
+        },
+        {
+          "animal": 9,
+          "animalName": "Aguila",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 2
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 32,
+          "animalName": "Ardilla",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "24": {
+      "animalName": "Iguana",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 21,
+          "animalName": "Gallo",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacrán",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 37,
+          "animalName": "Ballena",
+          "color": "green",
+          "count": 4
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "25": {
+      "animalName": "Gallina",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 20,
+          "animalName": "Cochino",
+          "color": "black",
+          "count": 14
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 10
+        },
+        {
+          "animal": 20,
+          "animalName": "Cochino",
+          "color": "black",
+          "count": 5
+        },
+        {
+          "animal": 2,
+          "animalName": "Toro",
+          "color": "black",
+          "count": 4
+        }
+      ]
+    },
+    "26": {
+      "animalName": "Vaca",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 17,
+          "animalName": "Pavo",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 21,
+          "animalName": "Gallo",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 19,
+          "animalName": "Chivo",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 27,
+          "animalName": "Perro",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 36,
+          "animalName": "Culebra",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "27": {
+      "animalName": "Perro",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 4,
+          "animalName": "Alacrán",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "28": {
+      "animalName": "Zamuro",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 9,
+          "animalName": "Aguila",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 0,
+          "animalName": "Delfín",
+          "color": "green",
+          "count": 2
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 12,
+          "animalName": "Caballo",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 4
+        }
+      ]
+    },
+    "29": {
+      "animalName": "Elefante",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 35,
+          "animalName": "Jirafa",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 2
+        }
+      ]
+    },
+    "30": {
+      "animalName": "Caiman",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 30,
+          "animalName": "Caiman",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 4,
+          "animalName": "Alacran",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 30,
+          "animalName": "Caiman",
+          "color": "red",
+          "count": 4
+        }
+      ]
+    },
+    "31": {
+      "animalName": "Lapa",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 24,
+          "animalName": "Iguana",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 28,
+          "animalName": "Zamuro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 31,
+          "animalName": "Lapa",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 15,
+          "animalName": "Zorro",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 31,
+          "animalName": "Lapa",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "32": {
+      "animalName": "Ardilla",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 33,
+          "animalName": "Pescado",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 5,
+          "animalName": "León",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 23,
+          "animalName": "Cebra",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 31,
+          "animalName": "Lapa",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "33": {
+      "animalName": "Pescado",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 30,
+          "animalName": "Caiman",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 3,
+          "animalName": "Ciempies",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 32,
+          "animalName": "Ardilla",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "34": {
+      "animalName": "Venado",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 36,
+          "animalName": "Culebra",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 9,
+          "animalName": "Aguila",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 30,
+          "animalName": "Caiman",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 2
+        }
+      ]
+    },
+    "35": {
+      "animalName": "Jirafa",
+      "color": "black",
+      "antecesores": [
+        {
+          "animal": 23,
+          "animalName": "Cebra",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 32,
+          "animalName": "Ardilla",
+          "color": "red",
+          "count": 3
+        },
+        {
+          "animal": 0,
+          "animalName": "Delfin",
+          "color": "green",
+          "count": 2
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 18,
+          "animalName": "Burro",
+          "color": "red",
+          "count": 5
+        },
+        {
+          "animal": 25,
+          "animalName": "Gallina",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 16,
+          "animalName": "Oso",
+          "color": "red",
+          "count": 3
+        }
+      ]
+    },
+    "36": {
+      "animalName": "Culebra",
+      "color": "red",
+      "antecesores": [
+        {
+          "animal": 1,
+          "animalName": "Carnero",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 24,
+          "animalName": "Iguana",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 26,
+          "animalName": "Vaca",
+          "color": "black",
+          "count": 3
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 34,
+          "animalName": "Venado",
+          "color": "red",
+          "count": 4
+        },
+        {
+          "animal": 8,
+          "animalName": "Ratón",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    },
+    "37": {
+      "animalName": "Ballena",
+      "color": "green",
+      "antecesores": [
+        {
+          "animal": 17,
+          "animalName": "Pavo",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 24,
+          "animalName": "Iguana",
+          "color": "black",
+          "count": 4
+        },
+        {
+          "animal": 37,
+          "animalName": "Ballena",
+          "color": "green",
+          "count": 4
+        }
+      ],
+      "sucesores": [
+        {
+          "animal": 37,
+          "animalName": "Ballena",
+          "color": "green",
+          "count": 4
+        },
+        {
+          "animal": 10,
+          "animalName": "Tigre",
+          "color": "black",
+          "count": 3
+        },
+        {
+          "animal": 13,
+          "animalName": "Mono",
+          "color": "black",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "generatedAt": "2025-08-20T00:31:17.373Z",
+  "description": "TOP 3 Antecesores y Sucesores hardcodeados para cada animal"
+}

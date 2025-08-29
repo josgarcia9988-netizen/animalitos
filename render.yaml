@@ -1,0 +1,24 @@
+ nservices:
+  - type: web
+    name: animalitos-predictions
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8000
+      - key: TELEGRAM_BOT_TOKEN
+        value: "7634433496:AAHaeQscZ2szJwt8MQusGZVXORZHxV_w4VY"
+      - key: TELEGRAM_CHAT_IDS
+        value: "6912929677"
+      - key: MONGODB_USERNAME
+        value: "josgarcia9988"
+      - key: MONGODB_PASSWORD
+        value: "Chuchu2412.."
+      - key: MONGODB_CLUSTER
+        value: "cluster0.cjgqs9q.mongodb.net"
+      - key: MONGODB_DATABASE
+        value: "animalitos_db"

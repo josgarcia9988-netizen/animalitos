@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Historial de Efectividad - Animalitos Predictor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-success {
+            background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .prediction-item {
+            border-left: 3px solid #dc3545;
+            background: #fff;
+            margin-bottom: 4px;
+            padding: 6px;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            font-size: 0.8rem;
+        }
+
+        .prediction-item.success {
+            border-left-color: #28a745;
+        }
+
+        .prediction-item.partial {
+            border-left-color: #ffc107;
+        }
+
+        .prediction-item.failed {
+            border-left-color: #dc3545;
+        }
+
+        .history-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .history-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .history-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .history-item.success {
+            border-left: 5px solid #28a745;
+        }
+
+        .history-item.partial {
+            border-left: 5px solid #ffc107;
+        }
+
+        .history-item.failed {
+            border-left: 5px solid #dc3545;
+        }
+
+        .item-header {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .prediction-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prediction-date {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+            font-size: 0.9rem;
+        }
+
+        .prediction-time {
+            color: #666;
+            font-size: 0.75rem;
+        }
+
+        .result-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .status-icon {
+            font-size: 1rem;
+        }
+
+        .success-icon { color: #28a745; }
+        .partial-icon { color: #ffc107; }
+        .failed-icon { color: #dc3545; }
+
+        .item-body {
+            padding: 12px 15px;
+        }
+
+        .predictions-section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .predictions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .prediction-card {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .prediction-card.winner {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .prediction-number {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .prediction-name {
+            font-size: 0.65rem;
+            color: #666;
+            margin-top: 1px;
+        }
+
+        .prediction-prob {
+            font-size: 0.6rem;
+            color: #007bff;
+            margin-top: 1px;
+        }
+
+        .result-section {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .result-comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .predicted-result, .actual-result {
+            text-align: center;
+        }
+
+        .result-animal {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .result-details {
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .vs-divider {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .color-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 3px;
+        }
+
+        .color-red { background-color: #dc3545; }
+        .color-black { background-color: #343a40; }
+        .color-green { background-color: #28a745; }
+
+        .prediction-item {
+            transition: all 0.3s ease;
+        }
+
+        .prediction-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .prediction-hit {
+            animation: pulse-green 2s infinite;
+        }
+
+        .prediction-miss {
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .item-header {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .predictions-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 8px;
+            }
+
+            .result-comparison {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .vs-divider {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> Historial de Efectividad</h1>
+            <p>Seguimiento completo de todas las predicciones y sus resultados</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="loadHistory()">
+                <i class="fas fa-sync"></i>
+                Actualizar Datos
+            </button>
+            <a href="/" class="btn btn-success">
+                <i class="fas fa-home"></i>
+                Volver al Inicio
+            </a>
+        </div>
+
+        <div class="stats-summary" id="statsSummary">
+            <div class="stat-card">
+                <div class="stat-number" id="totalPredictions">-</div>
+                <div class="stat-label">TOTAL PREDICCIONES</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="correctPredictions">-</div>
+                <div class="stat-label">PREDICCIONES CORRECTAS</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="accuracyRate">-%</div>
+                <div class="stat-label">TASA DE ACIERTO</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="colorAccuracy">-%</div>
+                <div class="stat-label">PRECISIÓN COLORES</div>
+            </div>
+        </div>
+
+        <div class="history-container">
+            <div class="history-header">
+                <h2><i class="fas fa-history"></i> Historial de Predicciones</h2>
+                <span id="historyCount">Cargando...</span>
+            </div>
+            
+            <div id="historyContent">
+                <div class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Cargando historial completo...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cargar datos al iniciar
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHistory();
+        });
+
+        async function loadHistory() {
+            const content = document.getElementById('historyContent');
+            const historyCount = document.getElementById('historyCount');
+            
+            // Mostrar loading
+            content.innerHTML = `
+                <div class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Cargando historial completo...</p>
+                </div>
+            `;
+
+            try {
+                const response = await fetch('/api/prediction-history');
+                const data = await response.json();
+
+                if (data.success && data.history.length > 0) {
+                    displayHistory(data.history);
+                    updateStats(data.history);
+                    historyCount.textContent = `${data.total} predicciones registradas`;
+                } else {
+                    content.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <h3>Historial Limpio</h3>
+                            <p>El historial de efectividad ha sido reiniciado. Las nuevas predicciones se registrarán aquí.</p>
+                        </div>
+                    `;
+                    historyCount.textContent = '0 predicciones';
+                }
+            } catch (error) {
+                console.error('Error cargando historial:', error);
+                content.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Error de Conexión</h3>
+                        <p>No se pudo cargar el historial. Intenta actualizar la página.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displayHistory(history) {
+            const content = document.getElementById('historyContent');
+            
+            if (history.length === 0) {
+                content.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <h3>Sin Historial</h3>
+                        <p>Aún no hay predicciones registradas.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const historyHTML = history.map(item => {
+                const status = getStatusInfo(item);
+                const iconColor = status.iconClass === 'success-icon' ? '#28a745' : 
+                                 status.iconClass === 'partial-icon' ? '#ffc107' : 
+                                 status.iconClass === 'failed-icon' ? '#dc3545' : '#6c757d';
+                
+                return `
+                    <div class="prediction-item ${getStatusClass(item)}">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <div>
+                                <div style="font-size: 0.65rem; color: #666;">${item.predictionDate}</div>
+                                <div style="font-weight: bold; font-size: 0.75rem;">${item.actualResult ? item.actualResult.time : 'Pendiente'}</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 2px;">
+                                <i class="fas ${status.icon}" style="color: ${iconColor}; font-size: 0.7rem;"></i>
+                                <span style="color: ${iconColor}; font-weight: bold; font-size: 0.7rem;">${status.text}</span>
+                            </div>
+                        </div>
+                        
+                        ${item.actualResult ? `
+                            <div style="margin-bottom: 6px;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 2px;">
+                                    ${item.predictions.map(pred => `
+                                        <div style="
+                                            padding: 2px 4px; 
+                                            border-radius: 2px; 
+                                            background: #f8f9fa;
+                                            border-left: 1px solid #007bff;
+                                            font-size: 0.65rem;
+                                            text-align: center;
+                                        ">
+                                            <strong>${pred.animal.toString().padStart(2, '0')} ${pred.animalName}</strong><br>${pred.probability}%
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; font-size: 0.7rem;">
+                                <div style="text-align: center;">
+                                    <div style="font-weight: bold;">Color Predicho</div>
+                                    <div style="color: #666;">
+                                        ${item.colorPrediction || 'N/A'}
+                                        <span class="color-indicator color-${item.colorPrediction}"></span>
+                                    </div>
+                                </div>
+                                <div style="font-weight: bold; color: #666;">VS</div>
+                                <div style="text-align: center;">
+                                    <div style="font-weight: bold;">${item.actualResult.animalName} (${item.actualResult.animal.toString().padStart(2, '0')})</div>
+                                    <div style="color: #666;">
+                                        ${item.actualResult.time} - ${item.actualResult.color}
+                                        <span class="color-indicator color-${item.actualResult.color}"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        ` : `
+                            <p style="text-align: center; color: #666; padding: 10px; font-size: 0.7rem;">
+                                Esta predicción aún no tiene resultado verificado.
+                            </p>
+                        `}
+                    </div>
+                `;
+            }).join('');
+
+            content.innerHTML = historyHTML;
+        }
+
+        function getStatusClass(item) {
+            if (!item.actualResult) return '';
+            if (item.animalHit && item.colorHit) return 'success';
+            if (item.animalHit || item.colorHit) return 'partial';
+            return 'failed';
+        }
+
+        function getStatusInfo(item) {
+            if (!item.actualResult) {
+                return {
+                    icon: 'fa-clock',
+                    iconClass: '',
+                    text: 'Pendiente'
+                };
+            }
+            
+            // Solo 2 estados: Éxito Total si pega el animal, Sin Acierto si no pega
+            if (item.animalHit) {
+                return {
+                    icon: 'fa-check-circle',
+                    iconClass: 'success-icon',
+                    text: 'Éxito Total'
+                };
+            }
+            
+            return {
+                icon: 'fa-times-circle',
+                iconClass: 'failed-icon',
+                text: 'Sin Acierto'
+            };
+        }
+
+        function updateStats(history) {
+            const total = history.length;
+            const withResults = history.filter(h => h.actualResult);
+            const animalHits = withResults.filter(h => h.animalHit).length;
+            const colorHits = withResults.filter(h => h.colorHit).length;
+            const totalHits = withResults.filter(h => h.animalHit || h.colorHit).length;
+            
+            document.getElementById('totalPredictions').textContent = total;
+            document.getElementById('correctPredictions').textContent = totalHits;
+            document.getElementById('accuracyRate').textContent = withResults.length > 0 ? 
+                `${((totalHits / withResults.length) * 100).toFixed(1)}%` : '0%';
+            document.getElementById('colorAccuracy').textContent = withResults.length > 0 ? 
+                `${((colorHits / withResults.length) * 100).toFixed(1)}%` : '0%';
+        }
+    </script>
+</body>
+</html>

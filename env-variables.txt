@@ -1,0 +1,23 @@
+# Variables de entorno que necesitas configurar en Render
+
+## MongoDB Configuration
+MONGODB_USERNAME=josgarcia9988
+MONGODB_PASSWORD=Chuchu2412..
+MONGODB_CLUSTER=cluster0.cjgqs9q.mongodb.net
+MONGODB_DATABASE=animalitos_db
+
+## Telegram Configuration
+TELEGRAM_BOT_TOKEN=7634433496:AAHaeQscZ2szJwt8MQusGZVXORZHxV_w4VY
+TELEGRAM_CHAT_IDS=6912929677
+
+## Server Configuration
+NODE_ENV=production
+PORT=8000
+
+# Instrucciones para configurar en Render:
+# 1. Ve a tu dashboard de Render
+# 2. Selecciona tu servicio "animalitos-predictions"
+# 3. Ve a la pestaña "Environment"
+# 4. Agrega cada variable con su valor correspondiente
+# 5. Guarda los cambios
+# 6. Reinicia el servicio
